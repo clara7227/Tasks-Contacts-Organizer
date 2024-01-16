@@ -3,15 +3,16 @@ import React from 'react';
 import { FaTrash } from 'react-icons/fa';
 import { ContactUpdate } from './ContactUpdate';
 
+
 export const ContactItem = ({
 	contact,
 	handleUpdateContact,
 	 handleDeleteContact,
 	
 }) => {
+	
 	return (
-		<li>
-			
+		<li className='ActionItem'>
 			<ContactUpdate contact={contact}  handleUpdateContact={handleUpdateContact} />
 			<button
 				className='btn-delete'
@@ -19,6 +20,7 @@ export const ContactItem = ({
 			>
 				<FaTrash />
 		</button>
+	
 		</li>
 	);
 };

@@ -1,95 +1,80 @@
 "use client";
-import { useState } from 'react';
-// import './App.css';
-import { TaskAdd } from './components/TaskAdd';
-import { TaskList } from './components/TaskList';
-import { useTask } from './hooks/useTask';
-import { ContactAdd } from './components/ContactAdd';
-import { useContact } from './hooks/useContact';
-import { ContactList } from './components/ContactList';
-import { ContactSearch } from './components/ContactSearch';
+
+import { useTask } from "./hooks/useTask";
+import Image from "next/image";
+import { useState } from "react";
+import { useRouter } from 'next/router';
 
 function App() {
-	const {
-		//definicion de variables
-		todos,
-		todosCount,
-		pendingTodosCount,
-		handleNewTodo,
-		handleDeleteTodo,
-		handleCompleteTodo,
-		handleUpdateTodo,
-	} = useTask();
+  //alert("El usuario es `usuario@ejemplo.es`, y la contraseña es `contraseña`");
 
-  const {
-	//definicion de variables
-    contacts,
-//	contactsearch,
-    handleNewContact,
-	handleUpdateContact,
-	handleDeleteContact,
-	handleSearchContact
-  } = useContact();
-//   let elementoABuscar = 30;
-//   // Array de ejemplo
-// let array = [10, 20, 30, 30, 40, 50];
+  //definicion de variables
 
-// Usando el método filter para buscar el elemento
-// let elementosFiltrados = array.filter(function(elemento) {
-// 	return elemento === elementoABuscar;
+  const [inputPasswordValue, setInputPasswordValue] = useState();
+  const handleInputChange = (event) => {
+    // Actualiza el estado con el nuevo valor del input
+    setInputPasswordValue(event.target.value);
+  };
 
-// }
-
-// );
-
-// // Mostrar el resultado
-// console.log(elementosFiltrados); // Devolverá [30], ya que es el único elemento que es igual a 30 en el array.
-	return (
-		
-		<>
-			<div className='card-to-do'>
-				<h1>Lista de tareas</h1>
-				<div className='counter-todos'>
-					<h3>
-						N° Tareas: <span>{todosCount}</span>
-					</h3>
-					<h3>
-						Pendientes: <span>{pendingTodosCount}</span>
-					</h3>
-				</div>
-
-				<div className='add-todo'>
-					<h3>Agregar Tarea</h3>
-					<TaskAdd handleNewTodo={handleNewTodo} />
-				</div>
-
-				<TaskList
-					todos={todos}
-					handleUpdateTodo={handleUpdateTodo}
-					handleDeleteTodo={handleDeleteTodo}
-					handleCompleteTodo={handleCompleteTodo}
-				/>
-			</div>
-      <div className='card-to-do'>
-				<h1>Lista de contactos</h1>
-        {/*cambiar clases para que sean de contacto, o hacer clases genericas*/}
-				<div className='add-todo'>
-					<h3>Agregar Contacto</h3>
-					< ContactAdd handleNewContact={handleNewContact} />
-				</div>
-
-				<ContactSearch 
-				contacts={contacts}
-				handleSearchContact={handleSearchContact}
-				/>
-				<ContactList
-				contacts={contacts}
-				handleUpdateContact={handleUpdateContact}
-				handleDeleteContact={handleDeleteContact}
-				/>
-			</div>
-		</>
-	);
+  //VERIFICACION CORREO
+  const HandleVerification = () => {
+    if (inputPasswordValue == password) {
+      alert("El usuario y contraseña si coinciden");
+	  router.push('/pages/tasks');
+    } else {
+      alert("El usuario y contraseña no coinciden");
+    }
+  };
+  const password = "contraseña";
+  console.log(inputPasswordValue);
+  return (
+    <div className="App">
+      <div className="containerLogin">
+        <Image src="/img/image_3.png" width={540} height={760} />
+        <div className="CardLogin">
+          <div class="LogoLogin">2DO/2DAY</div>
+          <div className="LoginContent">
+            <h3>Welcome back </h3>
+            <p>Please enter your details</p>
+            <div className="LoginInputs">
+              <form className="ItemAddForm">
+                <input
+                  type="text"
+                  className="input-add"
+                  name="description"
+                  placeholder="Email"
+                  value="usuario@ejemplo.es"
+                />
+                <input
+                  type="text"
+                  className="input-add"
+                  name="description"
+                  value={inputPasswordValue}
+                  onChange={handleInputChange}
+                  placeholder="Password"
+                />
+              </form>
+            </div>
+            <div className="LoginButtons">
+              <button
+                onClick={HandleVerification}
+                className="BtnAddItem"
+                type="submit"
+              >
+                Log In
+              </button>
+              <button className="BtnAddGoogle" type="submit">
+                Log In with Google
+              </button>
+            </div>
+          </div>
+          <div className="Singup">
+            Don't have an account? <b>Sing up</b>{" "}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default App;

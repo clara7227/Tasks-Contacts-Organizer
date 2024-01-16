@@ -1,0 +1,63 @@
+.card-to-do {
+  z-index: 2;
+}
+
+.TimeAvailable {
+  position: fixed;
+  right: 54px;
+  z-index: 1;
+}
+.TimeAvailable h4 {
+  margin: 0px 0px 12px 6px;
+}
+
+.add-todo {
+  position: fixed;
+  top: 17vh;
+  left: 35vw;
+  width: 30vw;
+  z-index: 4;
+  background-color: var(--grey);
+  border-radius: 24px;
+  padding: 2em;
+}
+.add-todo form {
+  display: flex;
+  flex-direction: column;
+}
+.add-todo form label {
+  font-size: 12px;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.NoDisplay {
+  display: none;
+}
+
+.Background {
+  background-color: rgba(0, 0, 0, 0.608);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.2ms;
+}
+
+.InputButtonGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.InputButtonGroup div {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.InputButtonGroup div button {
+  width: 60%;
+  border-radius: 24px;
+  background-color: var(--grey);
+}/*# sourceMappingURL=tasksPage.css.map */

@@ -1,0 +1,27 @@
+@import "../variables.modules";
+@import "../mixins.scss";
+
+.SearchInput {
+    margin: 0px;
+    span {
+        color: var(--medium-grey);
+        margin-right: 8px;
+    }
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @include Input;
+        background-color: var(--very-dark-grey);
+        border-bottom: solid 1px var(--dark-grey-input);
+        width: 80%;
+        
+    }
+    input {  
+    color: var(--medium-grey);
+    background-color: var(--very-dark-grey);
+    border: none;
+    outline: none;
+   
+    };
+}

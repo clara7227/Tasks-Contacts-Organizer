@@ -1,0 +1,68 @@
+
+
+.card-to-do {
+	//box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    z-index:2;
+}
+.TimeAvailable {
+    position: fixed;
+    right: 54px;
+    z-index:1;
+    h4{
+        margin:0px 0px 12px 6px;
+    }
+}
+
+//OVERLAY ADD TASK
+.add-todo {
+    position: fixed;
+    top: 17vh;
+    left: 35vw;
+    width: 30vw;
+    z-index: 4;
+//height: 40vh;
+background-color: var(--grey);
+border-radius: 24px;
+padding: 2em;
+    form {
+        display: flex;
+        flex-direction: column;
+        label {
+            font-size: 12px;
+            color: white;
+            margin-bottom: 4px;
+        }
+    }
+}
+.NoDisplay {
+    display: none;
+}
+.Background {
+    background-color: rgba(0, 0, 0, 0.608);
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: all 0.2ms
+}
+
+.InputButtonGroup {
+    display: flex; flex-direction: row;
+    align-items: center;
+    div{
+    display: flex; flex-direction: column;
+    width: 20%;
+        input {
+        
+        }
+        button {
+            width: 60%;
+            border-radius: 24px;
+            background-color: var(--grey);
+        }
+}
+   
+}
+

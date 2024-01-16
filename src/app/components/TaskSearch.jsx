@@ -41,10 +41,10 @@ export const ContactSearch = ({
                     name='description'
                     value={description}
                     onChange={onInputChange}
-                    placeholder='Search contact'
+                    placeholder='Busca el contacto'
                 />
             </div>
-            <button className='btn-add' type='submit'>
+            <button className='BtnSearch' type='submit'>
                 Buscar
             </button>
             <button

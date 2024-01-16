@@ -1,0 +1,167 @@
+h3 {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 56px;
+  color: white;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 36px;
+  color: white;
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+button {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+:root {
+  --blue: #283787;
+  --blue-lighter: #313f8f;
+  --blue2: #427ACE;
+  --dark-blue: #232666;
+  --purple: #652975;
+  --purple2:#C073D3;
+  --most-light-grey: #D0D0D0;
+  --lighter-grey: #CDCDCD;
+  --light-grey: #C2C2C2;
+  --medium-grey: #9f9f9f;
+  --done-grey: #535353;
+  --grey: #2e2e2e;
+  --dark-grey: #232323;
+  --dark-grey-input: #242424;
+  --very-dark-grey-transparent: rgba(21, 21, 21, 0.905);
+  --very-dark-grey: #1e1e1e;
+  --azul-hover: #48cae4;
+  --rojo-hover: #e5383b;
+  --verde: #09a129;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 56px;
+  color: white;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 36px;
+  color: white;
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+button {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+:root {
+  --blue: #283787;
+  --blue-lighter: #313f8f;
+  --blue2: #427ACE;
+  --dark-blue: #232666;
+  --purple: #652975;
+  --purple2:#C073D3;
+  --most-light-grey: #D0D0D0;
+  --lighter-grey: #CDCDCD;
+  --light-grey: #C2C2C2;
+  --medium-grey: #9f9f9f;
+  --done-grey: #535353;
+  --grey: #2e2e2e;
+  --dark-grey: #232323;
+  --dark-grey-input: #242424;
+  --very-dark-grey-transparent: rgba(21, 21, 21, 0.905);
+  --very-dark-grey: #1e1e1e;
+  --azul-hover: #48cae4;
+  --rojo-hover: #e5383b;
+  --verde: #09a129;
+}
+
+.containerLogin {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  height: 100vh;
+}
+
+.LogoLogin {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--lighter-grey);
+}
+
+.BtnAddGoogle {
+  color: white;
+  width: 100%;
+  position: relative;
+  border-radius: 48px;
+  padding: 0.7em;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 56px;
+  margin-top: 32px;
+  background: var(--light-grey);
+  color: var(--grey);
+}
+
+.LoginContent h3 {
+  margin-bottom: 24px;
+}
+.LoginContent p {
+  color: rgb(208, 208, 208);
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.LoginInputs form {
+  display: flex;
+  flex-direction: column;
+}
+
+.CardLogin {
+  background-color: var(--very-dark-grey);
+  border-radius: 24px;
+  padding: 56px;
+  margin: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Singup {
+  bottom: 48px;
+  color: var(--purple2);
+}/*# sourceMappingURL=Login.css.map */

@@ -1,0 +1,171 @@
+.AddTask {
+    @include ButtonAdd;
+    background: var(--dark-blue);
+    transition: 200ms all;
+    :hover {
+        transition: 200ms all;
+            font-size: 2.5em;
+    
+    }
+}
+.AddContact {
+    @include ButtonAdd;
+    background: var(--purple);
+}
+.AddToday {
+    @include ButtonToday;
+    background: var(--very-dark-grey);
+    color: #6A6A6A;
+    :hover {
+        @include ButtonToday;
+        background: var(--dark-grey);
+        color: #6A6A6A;
+    }
+}
+.DeleteToday {
+    @include ButtonToday;
+    background: var(--blue);
+    color: var(--lighter-grey);
+    :hover {
+        @include ButtonToday;
+        background: var(--blue-lighter);
+        color: var(--lighter-grey);
+    }
+
+}
+
+//
+// complete
+.check-box {
+	width:16px;
+	margin: 17px 12px;
+}
+.container-done {
+	background-color:  var(--grey);
+	width: 16px;
+	height: 16px;
+	border-radius: 2px;
+	border: 2px solid  var(--medium-grey);
+	cursor: pointer;
+	margin-left: 0px;
+
+	span {
+		font-size:1em;
+		font-weight: 600;
+		opacity: 0;
+		
+	}
+}
+
+.container-done.active {
+	background-color: var(--purple2);
+	border: 0px solid  var(--medium-grey);
+	span {
+		font-size:1em;
+		font-weight: 600;
+		color:var(--grey);
+		opacity:1;
+	}
+}
+
+.text-decoration-dashed {
+	text-decoration: line-through;
+}
+//delete
+.btn-delete {
+	background-color: var(--rojo);
+	color: var(--medium-grey);
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	transition: all 0.3s;
+	cursor: pointer;
+	font-family: inherit;
+    max-height: 48px;
+}
+
+.btn-delete:hover {
+	background-color: var(--dark-grey);
+}
+
+//edit
+.btn-edit {
+    max-height: 48px;
+	background-color: var(--azul);
+	color:  var(--medium-grey);
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	transition: all 0.3s;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn-edit:hover {
+	background-color: var(--dark-grey);
+}
+
+//expand
+.btn-expand {
+    max-height: 48px;
+    background-color: var(--azul);
+	color:  var(--medium-grey);
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 50%;
+	transition: all 0.3s;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+.btn-expand:hover {
+	background-color: var(--dark-grey);
+}
+
+//BUTTON ADD TODAY TASK
+.btn-add-today {
+    border-radius: 48px;
+    background: #1E1E1E;
+ //   padding: 14px 28px 14px 14px;
+    border: none;
+    color: #B5B5B5;
+    margin: 8px 0 0 12px;
+    width: 100%;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	justify-content: center;
+    p {
+        margin-left: 6px;
+    }
+}
+//BUTTONADDITEM
+
+.BtnAddItem{
+    @include ButtonAddItem;
+    background-color: var(--blue);
+    :hover {
+    background-color: var(--dark-blue);
+    }
+}
+
+//search
+
+.BtnSearch {
+    @include ButtonAddItem;
+    background: var(--very-dark-grey);
+    width: 130px;
+    margin: 0 12px 0 12px;
+    font-size: 12px;
+    color: var(--medium-grey);
+}

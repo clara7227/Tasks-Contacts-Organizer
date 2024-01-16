@@ -33,9 +33,10 @@ export const TaskUpdate = ({ todo, handleUpdateTodo }) => {
 	return (
             // cuando se envia formulario se dispara función de onSubmitUpdate
 		<form onSubmit={onSubmitUpdate}>
+			<div>
 			<input
 				type='text'
-				className={`input-update ${
+				className={`InputItemTitle ${
 					todo.done ? 'text-decoration-dashed' : ''
 				}`}
 				name='updateDescription'
@@ -45,10 +46,23 @@ export const TaskUpdate = ({ todo, handleUpdateTodo }) => {
 				readOnly={disabled}
 				ref={focusInputRef}
 			/>
-
+			<input
+				type='text'
+				className={`InputItemDetail ${
+					todo.done ? 'text-decoration-dashed' : ''
+				}`}
+				name='updateDescription'
+				value= "1h."
+				onChange={onInputChange}
+				placeholder='¿Qué hay que hacer?'
+				readOnly={disabled}
+				ref={focusInputRef}
+			/>
+</div>
 			<button className='btn-edit' type='submit'>
 				<FaEdit />
 			</button>
+			
 		</form>
 	);
 };
