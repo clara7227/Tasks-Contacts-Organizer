@@ -3,7 +3,10 @@
 import { useTask } from "./hooks/useTask";
 import Image from "next/image";
 import { useState } from "react";
+//no funciona porque no me deja instalar el paquete npm 
 import { useRouter } from 'next/router';
+import Link from "next/link";
+
 
 function App() {
   //alert("El usuario es `usuario@ejemplo.es`, y la contraseña es `contraseña`");
@@ -20,9 +23,10 @@ function App() {
   const HandleVerification = () => {
     if (inputPasswordValue == password) {
       alert("El usuario y contraseña si coinciden");
-	  router.push('/pages/tasks');
+	const LoginCorrect = true;
     } else {
       alert("El usuario y contraseña no coinciden");
+	  const LoginCorrect = false;
     }
   };
   const password = "contraseña";
@@ -61,7 +65,12 @@ function App() {
                 className="BtnAddItem"
                 type="submit"
               >
-                Log In
+
+<Link href= "./pages/tasks">
+                        Log In  </Link>
+				 {/* <Link href={LoginCorrect ? "" : "./tasks"}>
+                        Log In  </Link> */}
+               
               </button>
               <button className="BtnAddGoogle" type="submit">
                 Log In with Google

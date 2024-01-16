@@ -1,6 +1,10 @@
 @import "mixins.scss";
 @import "variables.modules";
 
+a {
+    color: white;
+    text-decoration: none;
+}
 .containerLogin {
     background-color: black;
     display: grid;

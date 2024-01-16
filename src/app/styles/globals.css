@@ -962,6 +962,11 @@ button {
   --verde: #09a129;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .containerLogin {
   background-color: black;
   display: grid;
